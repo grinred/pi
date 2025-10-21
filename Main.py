@@ -1,5 +1,18 @@
-import time
+from adafruit_servokit import ServoKit
+from time import sleep
 
-for i in range(0, 3):
-    print("Hi: " + str(i))
-    time.sleep(1)
+kit = ServoKit(channels=16)
+
+
+def servo1():
+    for a in range(0, 180):
+        kit.servo[0].angle = a
+        sleep(0.008)
+
+    for a in range(179, 1, -1):
+        kit.servo[0].angle = a
+        sleep(0.008)
+
+
+while True:
+    servo1()
