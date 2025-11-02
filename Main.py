@@ -1,8 +1,6 @@
 import time
 from pynput import keyboard
-
-
-# from adafruit_servokit import ServoKit
+from adafruit_servokit import ServoKit
 
 
 def map_value(throttle, in_min=0, in_max=100, out_min=750, out_max=2250):
